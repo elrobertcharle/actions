@@ -32,4 +32,4 @@ jobs:
     - name: print secret
       env:
         MYS: ${{secrets.CONNECTION_STRING}}
-      run: echo MYS
+      run: echo $MYS
