@@ -29,3 +29,7 @@ jobs:
       run: dotnet test --no-build --verbosity normal
     - name: use environment.connection_string secret
       run: echo ${{secrets.CONNECTION_STRING}}
+    - name: print secret
+      env:
+        MYS: ${{secrets.CONNECTION_STRING}}
+      run: echo MYS
